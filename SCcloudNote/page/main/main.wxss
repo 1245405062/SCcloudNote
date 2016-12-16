@@ -1,0 +1,238 @@
+/* main.wxss */
+
+page,.page {
+  height: 100%;
+  font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+}
+.view_column{
+ display: flex;
+ flex-direction:column;
+ justify-content: flex-start;
+ align-items: flex-start;
+}
+/*
+  menu 页面中的
+*/
+.page_menu{
+  height: 100%;
+  width: 100%;
+  position: fixed; 
+  background-color: rgb(255, 255, 255);
+  z-index: 0;
+  display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+}
+.view_row{
+   display: flex; 
+   flex-direction: row;
+   justify-content: flex-start;
+   align-items: center; 
+   background-color: transparent;
+   padding-left: 28rpx; 
+   min-height: 140rpx;
+   min-width: 750rpx;
+ }
+.button_out{display: flex;
+ flex: 0 1 auto;
+ width: 450rpx;
+ justify-content: center;
+ align-items: center;
+ margin-bottom: 30rpx;
+ margin-left: 60rpx;
+ font-size: 30rpx;
+ }
+ 
+.wc{
+  color: white;
+  padding: 30rpx 0 30rpx 40rpx;
+}
+.image_square{
+  height: 60rpx; 
+  width: 60rpx;
+  order: 0;    
+  display: block;
+  flex: 0 0 auto;
+  border-style: none;
+  border-radius: 0px; 
+  border-color: transparent; 
+  margin-left: 12rpx; 
+  background-color: transparent;
+  }
+.image_circle{
+  height: 90rpx; 
+  width: 90rpx;
+  order: 0;    
+  display: block;
+  flex: 0 0 auto;
+  border-style: none;
+  border-radius: 90rpx; 
+  border-color: transparent; 
+  background-color: transparent;
+  }
+  .view_row_bottomBorder{
+    width: 100%;
+   display: flex; 
+   flex-direction: row;
+   align-items: center; 
+   padding-left: 12rpx; 
+   margin-bottom: 16rpx; 
+   margin-right: 12rpx; 
+   border-style: solid; 
+   border-width: 0px 0px 2rpx; 
+   border-bottom-color: rgb(135,135,135); 
+   border-bottom-width: 3rpx;
+   background-color:rgb(221,81,69);
+  }
+
+
+/*
+main中的
+*/
+.page_main{
+  height: 100%;
+  position: fixed;
+  width: 750rpx;
+  background-color:rgb(255,246,236);
+  z-index: 0;
+  transition: All 0.4s ease; 
+  -webkit-transition: All 0.4s ease;
+  display: block;
+}
+.view_topbar{
+  width: 100%; 
+  height: 38%; 
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between;
+  background-image: url("../../images/bar_background.png");
+  background-size: cover;
+  padding-bottom: 8rpx;
+}
+.view_row_end{
+   width: 100%;
+   display: flex; 
+   flex-direction: row;
+   justify-content: flex-end;
+   align-items: center; 
+   padding-right: 12rpx; 
+}
+.image_halfTransparent{
+  width: 54rpx;
+  height: 54rpx;
+  border-radius: 25rpx;
+  border-style: solid;
+  border-color: rgb(135,135,135);
+  border-width: 5rpx;
+  margin-top: 12rpx;
+}
+.scrollView_list{
+  height: 62%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.notelist{
+   display: flex; 
+   flex-direction: column;
+   justify-content: space-between; 
+   background-color: transparent;
+   padding-left: 28rpx; 
+   padding-top: 16rpx;
+   padding-bottom: 8rpx;
+   min-height: 170rpx;
+   width: 100%;
+   border-bottom: 4rpx solid #fff;
+   overflow: hidden;
+}
+.view_notelist_contetnt{
+  height: auto;
+  width: 100%;
+  padding-top: 8rpx;
+  overflow: hidden;
+  overflow-y: hidden;
+}
+.view_notelist_detail{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 8rpx;
+  
+}
+/*--note列表中字体*/
+.text_notelist_title{
+  font-size: 34rpx;
+  font-family: Microsoft YaHei,sans-serif;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.text_notelist_content{
+  width: 100%;
+  height: 100%;
+  font-family: Microsoft YaHei; 
+  font-size: 32rpx; 
+  font-weight: 500;
+  overflow: hidden;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: rgb(135,135,135);
+}
+.text_notelist_detail{
+  font-family: Microsoft YaHei;
+  font-size: 26rpx;
+  text-align: start;
+  align-items: center;
+  color: rgb(180,180,180);
+}
+/*
+justify-content: flex-start(内容的排列排列：垂直方向从头开始，最顶部/水平方向的话，最左边挨着排)
+                //flex-end(内容从结尾开始排)
+                //center(内容在容器flex-direction方向的中间)
+                //space-between(内容会一头一尾)
+                //space-around(内容均匀的铺满全屏)
+*/
+/*
+.page-top_image{
+  position: absolute;
+  width: 68rpx;
+  height: 38rpx;
+  left: 20rpx;
+  top: 20rpx;
+}
+*/
+
+.c-state1{
+  transform: rotate(0deg) scale(1) translate(75%,0%); 
+  -webkit-transform: rotate(0deg) scale(1) translate(75%,0%); 
+}
+.c-state2{
+  transform: rotate(0deg) scale(.8) translate(75%,0%); 
+  -webkit-transform: rotate(0deg) scale(.8) translate(75%,0%); 
+}
+
+
+/*字体*/
+.text_topbar{
+  font-size: 30rpx;
+  color: rgb(0, 0, 0);
+  font-family: Microsoft YaHei; 
+  font-weight: 550;
+  width: 84rpx;
+  height: 40rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.text_menu_bar{
+
+}
+.text_menu_files{
+
+}
+.text_main_list{
+
+}

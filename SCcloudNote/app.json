@@ -1,0 +1,23 @@
+{
+  "debug": true,
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "rgb(221,81,69)",
+    "navigationBarTitleText": "酸菜\u4e91\u7b14\u8bb0",
+    "backgroundColor": "#ffffff",
+    "enablePullDownRefresh": false,
+    "backgroundTextStyle": "dark"
+  },
+  "pages": [
+    "page/login/login",
+    "page/note/note",
+    "page/main/main",
+    "page/showimag/showimag"
+  ],
+  "networkTimeout": {
+    "connectSocket": "",
+    "request": "",
+    "downloadFile": "",
+    "uploadFile": ""
+  }
+}

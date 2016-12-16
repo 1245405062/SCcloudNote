@@ -1,0 +1,45 @@
+<!--page/one/index.wxml-->
+<view class="page">
+    <view class="page_menu">
+            <view  class="view_column">
+                <view class="c-minheight view_row_bottomBorder" catchtap="tap_main" >
+                    <image class="image_circle" src="/images/client2.png"  mode="scaleToFill" />
+                    <text class=" text_topbar" style="color:rgb(255,255,255);margin-left:12rpx">{{username}}</text>
+                </view>
+                <view wx:for="{{notebook}}" wx:for-index="i" wx:key="unique">
+                    <view class="view_row"   style='background-color:{{notebook[i].bkcolor}};'  bindtouchend='notebook_press_end'  >
+                        <image class="image_square" id="{{notebook[i].folderid}}" mode="scaleToFill" src="/images/file.png" />
+                        <text class=" text_topbar" id="{{notebook[i].folderid}}" style="margin-left:30rpx;width:60%;opacity:{{notebook[i].alpha}};">{{notebook[i].name}}</text>
+                    </view>
+                </view>
+            </view>
+            <button catchtap="tap_out" class="button_out" size="default" type="warn">
+            退出登录
+            </button>  
+    </view>
+    
+    <!--主页-->
+    <scroll-view scroll-y='true' bindtouchmove="tap_drag" bindtouchend="tap_end" bindtouchstart="tap_start" class="page_main {{open ? 'c-state1' : ''}}" style="{{translate}}">
+       <!--topbar-->
+        <view class="view_topbar">
+            <view class="view_row_end">
+            <image class="image_halfTransparent" style="margin-top:12rpx" src="../../images/write.png" bindtap='newNote'></image>                   
+            </view>
+            <view class="view_column" style="align-items: center;" >
+                <image  src="../../images/client2.png" class="image_circle" style="height:200rpx;width:200rpx" catchtap="tap_main"></image>
+                <text class="text_topbar" style="color:rgb(255,255,255);text-align:center;width:80%">嘿！你好呀</text>
+            </view>
+        </view> 
+        <!--note列表-->
+            <view  class='notelist' style='background-color:{{note[i].bkcolor}};' wx:for="{{note}}" wx:for-index="i" wx:key="unique" bindtouchstart='note_press_start' bindtouchend='note_press_end' catchtap='note_tap' bindlongtap='note_long_tap'>
+                <text class='text_notelist_title' style='opacity:{{note[i].alpha}};' id='{{note[i].noteid}}' >{{note[i].title}}</text>
+                <view class="view_notelist_contetnt" wx:for="{{note[i].content}}" wx:for-index="j" wx:key="unique">
+                    <text id='{{note[i].noteid}}' style='opacity:{{note[i].alpha}};' class='text_notelist_content' >{{note[i].content[j]}}</text>
+                </view>
+                <view class="view_notelist_detail">
+                    <text id='{{note[i].noteid}}' class='text_notelist_detail'>{{note[i].updatedAt}}</text>
+                    <text id='{{note[i].noteid}}' class='text_notelist_detail'style='margin-left:40rpx;' >/{{address}}/</text>
+                </view>
+            </view>    
+    </scroll-view>
+</view>
