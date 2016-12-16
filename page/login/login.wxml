@@ -1,0 +1,81 @@
+<view wx:if="{{!ifLogup}}" class="view_login_splide">
+    <view class="wx-view_login">
+    <view class="view_logup_form">
+        <view class="wx-view_log_item" >
+            <text class="c-block wx-text_logup" >注册邮箱</text>
+            <input class="c-block c-fullwidth wx_input" style="margin-left:6rpx; {{warn.warn_name}}"placeholder="xxxx@email.com" type="text" bindinput="getEmail"/>
+        </view>
+        <view class="wx-view_log_item" style="border-bottom-style: none;">
+            <text class="c-block wx-text_logup" >密码</text>
+            <input class="c-block c-fullwidth wx_input" style="margin-left:6rpx; {{warn.warn_passwordSure}}" placeholder="请输入密码" type="text" password="true" maxlength="14" bindinput="getPassword"/>
+        </view>
+    </view>    
+    <button class="wx-button_logup"  catchtap="tap_login" hover-class="button-hover" size="default" type="warn">
+            登录
+    </button>
+    <view class="view_forgetOrLogup" >
+        <text  catchtap="forgetPassword" class="c-block wx-text_logup_to" >忘记密码？</text>
+        <text  catchtap="turnTologup" class="c-block wx-text_logup_to" >新用户注册 </text>
+    </view>
+    </view>
+</view>
+
+<view wx:if="{{ifLogup && !ifphone}}" class="view_login_splide" >
+    <!--注册模块-->
+    <view class="wx-view_login">
+    <view class="view_logup_form">
+        <view class="wx-view_log_item" >
+            <text class="c-block wx-text_logup">邮箱</text>
+            <input class="c-block c-fullwidth wx_input" placeholder="xxxx@email.com" 
+                style="{{warn.warn_email}}"
+                type="text" bindinput="getEmail"/>
+        </view>
+        <view class="wx-view_log_item">
+            <text class="c-block wx-text_logup" >密码</text>
+            <input class="c-block c-fullwidth wx_input"  placeholder="请输入密码" type="number" password="true" maxlength="14" bindinput="getPassword"/>
+        </view>
+        <view class="wx-view_log_item" style="border-bottom-style: none;" >
+            <text class="c-block wx-text_logup">确认密码</text>
+            <input class="c-block c-fullwidth wx_input" style="{{warn.warn_passwordSure}}"placeholder="请再次输入密码" type="number" password="true" maxlength="14" bindinput="passwordSure"/>
+        </view>
+    </view>    
+    <button catchtap="tap_logup"  class="wx-button_logup"  hover-class="button-hover" id="btn_login" size="default" type="warn" >
+        注册
+    </button>
+    <text catchtap="turnTologin" class="c-block wx-text_logup_to" >已有账户？登录 </text>
+    </view>    
+    
+    <!--手机快捷登录-->
+    <view class="view_otherAccount_column">
+        <view class="view_accounts" style="height: 40rpx;margin-bottom:10rpx;">
+            <view class="view_line"></view>
+            <text class="text_title">手机号快捷登录</text>
+            <view class="view_line"></view>
+        </view>
+        <view class="view_accounts" style="justify-content:center;">
+            <image class="img_account" src="../../images/phone2.png" catchtap="turnto_phone"></image>
+        </view>
+    </view>
+</view>
+
+<!--手机快捷登录模块-->
+<view wx:if="{{ifphone}}"class="wx-view_login" style="padding-top: 20rpx;height:100%;background-image: url('../../images/login_back.png');background-size: cover;">
+    <view class="view_logup_form">
+        <view class="wx-view_log_item" >
+            <input class="c-block wx_input" placeholder="请输入11位手机号" type="number" bindinput="getPhoneNum"/>
+            <view class="btn_getnum" catchtap="getnum">
+            获取验证码
+            </view>
+        </view>
+        <view class="wx-view_log_item" style="border-bottom-style: none;">
+            <input class="c-block c-fullwidth wx_input"  placeholder="请输入验证码" type="number" bindinput="inputNum"/>
+        </view>
+    </view>
+    <button class="wx-button_logup"  bindtap="quick_login_phone" data-id="{{phoneNum}}" hover-class="button-hover" size="default" type="warn" >
+            登录
+    </button>
+    <text catchtap="turnTologup" class="c-block wx-text_logup_to" style="margin-left:32rpx;">  {{getback}}</text>
+    
+</view>
+<import src="../../src/wetoast.wxml"/>
+<template is="wetoast" data="{{...__wetoast__}}"/>

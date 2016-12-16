@@ -1,0 +1,14 @@
+/* page/showimg/showimg.wxss */
+.showimg-container{
+  background-color: #000;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  vertical-align: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+.showimg-img{
+}

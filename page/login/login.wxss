@@ -1,0 +1,172 @@
+/* page/login/login.wxss */
+.wx-view_login{
+    display: flex; 
+    width: 100%; 
+    flex-direction: column; 
+    justify-content:flex-start; 
+    align-items: center; 
+    float: none; 
+    background:transparent;
+  }
+.view_logup_form{
+    width: 95%;
+    background-color: rgba(255,255,255,0.35);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius:16rpx;
+    margin: 24rpx;
+    border-style: solid;
+    border-color: rgba(235,235,235,0.8);
+    border-width: 2rpx;
+}
+.wx-view_log_item{
+    width: 100%; 
+    height: 100rpx;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    border-style: solid;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    border-bottom-width: 2rpx;
+    border-bottom-color: rgb(235,235,235);
+    background-color: rgba(255, 255, 255,0.3);
+    padding-left: 32rpx;
+}
+
+
+.view_login_splide{
+    display: flex; 
+    width: 100%; 
+    height: 100%; 
+    flex-direction: column; 
+    justify-content:space-between; 
+    align-items: center; 
+    float: none; 
+    padding-top: 20rpx;
+    background-image: url('../../images/login_back.png');
+    background-size: cover;
+}
+
+.wx-view_log_button{
+    display: flex; 
+    align-items: flex-end; 
+    width: 90%; 
+    align-self: center; 
+    flex: 0 1 auto; 
+    order: 1; 
+    flex-wrap: nowrap; 
+    align-content: flex-end; 
+    justify-content: center; 
+    }
+
+.wx-button_logup{
+    font-size:34rpx; 
+    width: 86%; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    flex: 0 1 auto; 
+    align-self: center; 
+    margin-top: 24rpx;
+}
+/*登录*/
+.view_forgetOrLogup{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 86%;
+}
+
+/*第三方登录*/
+.view_otherAccount_column{
+    width: 90%;
+    margin-bottom: 30rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+}
+.view_accounts{
+    width: 90%;
+    height: 100rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background: transparent;
+}
+
+.img_account{
+    width: 60rpx;
+    height: 60rpx;
+    border: none;
+    border-radius: 60rpx;
+    background-size: cover;
+    background-color: rgba(255,255,255,0.3);
+}
+/*手机快捷登陆*/
+
+/*字体*/
+.btn_getnum{
+    font-size: 30rpx;
+    font-weight: 550;
+    font-family: 宋体;
+    color: rgb(35,35,35);
+    background-color: rgba(255,255,255,0.7);
+    border:solid;
+    border-color: rgba(0,0,0,0.4);
+    border-width: 2rpx;
+    border-radius: 8rpx;
+    width: 172rpx;
+    height: 60rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10rpx;
+}
+.wx_input{
+    font-size: 34rpx;
+    font-weight: 550;
+    font-family: 宋体;
+    background:transparent;
+    color: rgb(35,35,35);
+}
+.wx-text_logup{
+    width: 170rpx; 
+    flex: 0 0 auto; 
+    font-size: 34rpx;
+    font-weight: 550;
+    font-family: 宋体;
+    background:transparent;    
+    color: rgb(35,35,35);
+}
+.wx-text_logup_to{
+    font-size: 26rpx; 
+    text-align: left; 
+    color: rgb(241, 1, 25); 
+    text-decoration: underline; 
+    align-self: flex-end; 
+    margin-top: 30rpx; 
+    margin-bottom: 2rpx;
+}
+.text_title{
+    font-family: 宋体;
+    font-size:30rpx;
+    font-weight: 600;
+    color: rgba(255,255,255,0.8);
+}
+.my_toast_title{
+    font-size: 32rpx;
+    color: rgb(255, 255, 255);
+    font-weight: bold; 
+    font-family: 宋体;
+    text-align: center;
+    }
