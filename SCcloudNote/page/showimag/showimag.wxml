@@ -1,5 +1,0 @@
-<!--page/showimg/showimg.wxml-->
-<view class='showimg-container'>
-    <image class='showimg-img' src="{{src}}" style="width:{{imagewidth}}px;height:{{imageheight}}px;margin:auto;" bindload="ImageLoad"></image>
-
-</view>
